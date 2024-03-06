@@ -19,7 +19,35 @@ xui.Class('App', 'xui.Module',{
         iniComponents : function(){
             // [[Code created by CrossUI RAD Studio
             var host=this, children=[], append=function(child){children.push(child.get(0));};
-
+            
+            append(
+                xui.create("xui.UI.Button")
+                .setHost(host,"xui_ui_button3")
+                .setLeft("22.857142857142858em")
+                .setTop("19.047619047619047em")
+                .setWidth("12.876190476190477em")
+                .setCaption("Nemocnice")
+                .onClickDrop([
+                    {
+                        "desc" : "Action 1",
+                        "type" : "page",
+                        "target" : "App.Nemocnice",
+                        "args" : [true],
+                        "method" : "switch",
+                        "event" : 1
+                    }
+                ])
+            );
+            
+            append(
+                xui.create("xui.UI.Button")
+                .setHost(host,"xui_ui_button7")
+                .setLeft("22.857142857142858em")
+                .setTop("22.857142857142858em")
+                .setWidth("12.876190476190477em")
+                .setCaption("Bar")
+            );
+            
             return children;
             // ]]Code created by CrossUI RAD Studio
         },
